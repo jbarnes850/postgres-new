@@ -14,6 +14,7 @@ Each database is paired with a large language model (LLM) which opens the door t
 - Build database diagrams
 
 ## How it works
+
 All queries in postgres.new run directly in your browser. There’s no remote Postgres container or WebSocket proxy.
 
 How is this possible? [PGlite](https://pglite.dev/), a WASM version of Postgres that can run directly in your browser. Every database that you create spins up a new instance of PGlite that exposes a fully-functional Postgres database. Data is stored in IndexedDB so that changes persist after refresh.
